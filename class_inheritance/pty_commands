@@ -1,0 +1,9 @@
+load "manager.rb"
+
+Ned = Manager.new("Ned", "Founder", 1000000)
+
+Shawna = Employee.new("Shawna", "TA", 12000)
+
+David = Employee.new("David", "TA", 10000)
+
+Darren = Manager.new("Darren", "TA Manager", 78000)
