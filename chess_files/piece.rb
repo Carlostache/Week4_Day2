@@ -2,10 +2,15 @@ require "byebug"
 
 class Piece
 
+  attr_reader :pos, :color
+
+  attr_writer :pos
+
   def initialize(color, board, pos)
-    @color = symbol
+    @color = color
     @board = board
-    @pos = []
+    @pos = pos
+
 
   end
 
@@ -14,7 +19,7 @@ class Piece
   end
 
   def empty?
-
+    @board[pos] == NullPiece
   end
 
   def valid_moves
@@ -22,16 +27,18 @@ class Piece
   end
 
   def pos=(val)
+    self.pos = val
 
   end
 
   def symbol
-
+    raise NotImplementedError
   end
 
   private
   
   def move_to_check?(end_pos)
+
 
   end
 
